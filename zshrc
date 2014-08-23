@@ -43,7 +43,9 @@ export PATH=/Users/max/.rbenv/shims:/usr/local/bin:/Users/max/.rbenv/bin:/usr/bi
 
 export EDITOR="vim"
 
-eval "$(rbenv init -)"
+if which rbenv >/dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 alias b='bundle exec'
 alias ..='cd ..'
