@@ -8,7 +8,7 @@ task :install do
   switch_to_zsh
   install_vundle
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.rdoc LICENSE oh-my-zsh tomorrow.itermcolors]
+  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh tomorrow.itermcolors]
   files << "oh-my-zsh/custom/plugins/git-custom"
   files << "oh-my-zsh/custom/tomorrow-custom.zsh-theme"
   files.each do |file|
