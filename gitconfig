@@ -1,0 +1,13 @@
+[user]
+	name = Max Zender
+	email = mail@maxzender.de
+[push]
+	default = upstream
+[color]
+	ui = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
+[branch]
+	autosetuprebase = always
