@@ -29,6 +29,7 @@ ZSH_THEME="tomorrow-custom"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+# Necessary for using tmux
 DISABLE_AUTO_TITLE=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
@@ -43,6 +44,7 @@ export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X
 
 export EDITOR="vim"
 
+# Only call rbenv init if it is installed
 if which rbenv >/dev/null; then
   eval "$(rbenv init -)"
 fi
@@ -52,6 +54,8 @@ alias ..='cd ..'
 alias ll='ls -al'
 alias grep='grep --color'
 
+# List all files after changing current directory
 cd() { builtin cd "$@" && ll; }
 
+# Increase the maximum number of file descriptors since it is very low by default on OS X
 ulimit -n 2048
