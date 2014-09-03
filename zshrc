@@ -57,5 +57,8 @@ alias grep='grep --color'
 # List all files after changing current directory
 cd() { builtin cd "$@" && ll; }
 
+# Alias for executing the ".tmux-session" file in the current directory
+mux() { ./.tmux-session; }
+
 # Increase the maximum number of file descriptors since it is very low by default on OS X
 ulimit -n 2048
