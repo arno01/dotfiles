@@ -56,6 +56,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,7 +70,6 @@ let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
 " Mappings
-map <C-n> :NERDTreeToggle<cr>
 map :nt :NERDTree
 imap kj <esc>
 nmap <C-b> :CtrlPBuffer<cr>
