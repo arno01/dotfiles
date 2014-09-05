@@ -57,6 +57,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
