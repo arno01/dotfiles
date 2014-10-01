@@ -62,3 +62,6 @@ mux() { ./.tmux-session; }
 
 # Increase the maximum number of file descriptors since it is very low by default on OS X
 ulimit -n 2048
+
+# Enable vi mode
+bindkey -v
