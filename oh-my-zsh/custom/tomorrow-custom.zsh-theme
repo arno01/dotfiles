@@ -21,19 +21,12 @@ $FG[004]%(!.#.»)%{$reset_color%} '
 PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
 RPS1='${return_code}'
 
+
 # color vars
 eval my_gray='$FG[239]'
 
-# Show vi mode
-function zle-line-init zle-keymap-select {
-  # right prompt
-  HOSTNAME='%n@%m%'
-  RPROMPT="$my_gray${${KEYMAP/vicmd/NORMAL}/(main|viins)/INSERT} | $HOSTNAME{$reset_color%}"
-  zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
+# right prompt
+RPROMPT='$my_gray%n@%m%{$reset_color%}%'
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[006] ["

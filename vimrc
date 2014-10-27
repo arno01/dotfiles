@@ -11,7 +11,6 @@ set number
 set hlsearch
 set splitright
 set splitbelow
-set ttimeoutlen=0
 
 " display whitespace
 set list
