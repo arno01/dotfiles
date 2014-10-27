@@ -19,9 +19,11 @@ set listchars=tab:▸\ ,trail:·,nbsp:·
 
 " indentation
 set autoindent
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+set softtabstop=4
+
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
 
 " cd folder preview
 set wildmenu
