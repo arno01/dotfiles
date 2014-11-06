@@ -47,8 +47,8 @@ call vundle#begin()
 set backspace=indent,eol,start
 
 " let Vundle manage Vundle
-Plugin 'gmarik/vundle'
-
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'mileszs/ack.vim'
