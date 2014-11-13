@@ -72,7 +72,7 @@ let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 
 " Mappings
-map :nt :NERDTree
+map :nt :NERDTreeToggle
 imap kj <esc>
 nmap <C-b> :CtrlPBuffer<cr>
 
