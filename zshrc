@@ -53,6 +53,7 @@ alias b='bundle exec'
 alias ..='cd ..'
 alias ll='ls -al'
 alias grep='grep --color'
+alias b2d='boot2docker'
 
 # List all files after changing current directory
 cd() { builtin cd "$@" && ll; }
