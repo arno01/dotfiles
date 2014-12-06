@@ -55,10 +55,13 @@ alias ll='ls -val'
 alias grep='grep --color'
 alias b2d='boot2docker'
 
-# Simulate OSX's pbcopy and pbpaste on other platforms
 if [ ! $(uname -s) = "Darwin" ]; then
+    # Simulate OSX's pbcopy and pbpaste on other platforms
     alias pbcopy='xclip -sel clip -i'
     alias pbpaste='xclip -sel clip -o'
+
+    # Configure keychain
+    eval `keychain -q --eval --agents ssh id_rsa`
 fi
 
 # List all files after changing current directory
