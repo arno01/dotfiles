@@ -51,9 +51,15 @@ fi
 
 alias b='bundle exec'
 alias ..='cd ..'
-alias ll='ls -al'
+alias ll='ls -val'
 alias grep='grep --color'
 alias b2d='boot2docker'
+
+# Simulate OSX's pbcopy and pbpaste on other platforms
+if [ ! $(uname -s) = "Darwin" ]; then
+    alias pbcopy='xclip -sel clip -i'
+    alias pbpaste='xclip -sel clip -o'
+fi
 
 # List all files after changing current directory
 cd() { builtin cd "$@" && ll; }
