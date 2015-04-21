@@ -51,7 +51,7 @@ fi
 
 alias b='bundle exec'
 alias ..='cd ..'
-alias ll='ls -val'
+alias ll='ls -hval'
 alias grep='grep --color'
 alias b2d='boot2docker'
 
