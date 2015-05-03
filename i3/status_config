@@ -11,8 +11,8 @@ general {
         interval = 5
 }
 
-order += "ipv6"
 order += "disk /"
+order += "disk /home"
 order += "wireless enp0s26u1u3"
 order += "ethernet enp3s0"
 order += "tztime local"
@@ -33,5 +33,9 @@ tztime local {
 }
 
 disk "/" {
-        format = "%avail"
+        format = "Root: %avail"
+}
+
+disk "/home" {
+        format = "Home: %avail"
 }
