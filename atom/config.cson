@@ -1,21 +1,25 @@
-'exception-reporting':
-  'userId': 'c6511f66-5b46-80e6-f337-dea3e537753c'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '438f3225e1c0d68806de6504c68b070c8eadec15'
-'editor':
-  'fontSize': 13
-  'preferredLineLength': 100
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'base16-tomorrow-dark-theme'
-  ]
-  'projectHome': '/Users/max/projects'
-'git-plus':
-  'openInPane': false
-'autocomplete':
-  'includeCompletionsFromAllBuffers': true
-'find-and-replace':
-  'openProjectFindResultsInRightPane': true
+"*":
+  "exception-reporting":
+    userId: "c6511f66-5b46-80e6-f337-dea3e537753c"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "438f3225e1c0d68806de6504c68b070c8eadec15"
+  editor:
+    fontSize: 13
+    preferredLineLength: 100
+    invisibles: {}
+  core:
+    themes: [
+      "atom-light-ui"
+      "tomorrow"
+    ]
+    projectHome: "/Users/max/projects"
+  "git-plus":
+    openInPane: false
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  "find-and-replace":
+    openProjectFindResultsInRightPane: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
