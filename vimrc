@@ -59,17 +59,21 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
+Plugin 'lervag/vimtex'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow
 
 " Configure airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
+
+" Default to latex, not plaintex
+let g:tex_flavor = "latex"
 
 " Mappings
 map :nt :NERDTreeToggle
@@ -78,6 +82,8 @@ nmap <C-b> :CtrlPBuffer<cr>
 
 nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
+
+let maplocalleader = ","
 
 " Highlight colors for gitgutter
 highlight LineNr ctermfg=grey
