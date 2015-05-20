@@ -84,11 +84,3 @@ nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
 
 let maplocalleader = ","
-
-" Highlight colors for gitgutter
-highlight LineNr ctermfg=grey
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=2 ctermbg=235 guifg=#009900 guibg=Grey"
-highlight GitGutterChange ctermfg=3 ctermbg=235 guifg=#bbbb00 guibg=Grey
-highlight GitGutterDelete ctermfg=1 ctermbg=235 guifg=#ff2222 guibg=Grey
-highlight link GitGutterChangeDelete GitGutterChange
