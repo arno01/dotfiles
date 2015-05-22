@@ -8,12 +8,9 @@
   editor:
     fontSize: 13
     preferredLineLength: 100
-    invisibles: {}
+    invisibles:
+      {}
   core:
-    themes: [
-      "atom-light-ui"
-      "tomorrow"
-    ]
     projectHome: "/Users/max/projects"
   "git-plus":
     openInPane: false
@@ -23,3 +20,5 @@
     openProjectFindResultsInRightPane: true
   "tree-view":
     hideVcsIgnoredFiles: true
+  "one-dark-ui":
+    layoutMode: "Compact"
