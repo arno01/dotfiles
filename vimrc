@@ -64,7 +64,7 @@ Plugin 'lervag/vimtex'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 
 " Configure airline
 let g:airline_left_sep=''
