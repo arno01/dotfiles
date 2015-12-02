@@ -44,6 +44,9 @@ export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/
 
 export EDITOR="vim"
 
+# Go config
+export GOPATH=$HOME/code/go
+
 # Only call rbenv init if it is installed
 if which rbenv >/dev/null; then
   eval "$(rbenv init -)"

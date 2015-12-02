@@ -60,6 +60,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'lervag/vimtex'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
