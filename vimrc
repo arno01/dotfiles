@@ -27,6 +27,10 @@ set wildmode=list:longest
 " use system clipboard
 set clipboard=unnamedplus
 
+" Map leader key
+let mapleader = ","
+let g:mapleader = ","
+
 " no swap files
 set noswapfile
 set nobackup
@@ -57,6 +61,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
 Plug 'lervag/vimtex'
 Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -79,5 +84,3 @@ nmap <C-b> :CtrlPBuffer<cr>
 nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
 
-let mapleader = ","
-let g:mapleader = ","
