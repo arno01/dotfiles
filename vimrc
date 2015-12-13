@@ -80,7 +80,9 @@ let g:tex_flavor = "latex"
 map :nt :NERDTreeToggle
 imap kj <esc>
 nmap <C-b> :CtrlPBuffer<cr>
+nmap <F8> :TagbarToggle<CR>
 
+" Mapping for new line above or below cursor
 nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
 
