@@ -6,7 +6,7 @@ desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
-  install_vundle
+  install_vim_plug
   replace_all = false
   files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh tomorrow.itermcolors]
   files << "oh-my-zsh/custom/plugins/git-custom"
@@ -93,14 +93,14 @@ def install_oh_my_zsh
   end
 end
 
-def install_vundle
-  if File.exist?(File.join(ENV['HOME'], ".vim/bundle/Vundle.vim"))
-    puts "found vundle installation"
+def install_vim_plug
+  if File.exist?(File.join(ENV['HOME'], ".vim/autoload/plug.vim"))
+    puts "found vim-plug installation"
   else
-    system %Q{git clone https://github.com/gmarik/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"}
+    system %Q{curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim}
   end
 end
 
 def install_vim_plugins
-  system "vim +PluginInstall +qall"
+  system "vim +PlugInstall"
 end

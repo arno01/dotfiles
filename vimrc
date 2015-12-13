@@ -1,7 +1,4 @@
 " general
-syntax on
-filetype off
-
 set encoding=utf-8
 set t_Co=256
 set nocompatible
@@ -27,6 +24,9 @@ set softtabstop=2
 set wildmenu
 set wildmode=list:longest
 
+" use system clipboard
+set clipboard=unnamedplus
+
 " no swap files
 set noswapfile
 set nobackup
@@ -40,30 +40,25 @@ set wildignore+=*theaterjobs*/vendor/*,*/web/bundles/*,*/app/cache/*,*/vendor/bu
 " allow hiding modified buffers
 set hidden
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Plug handles plugins
+call plug#begin('~/.vim/bundle')
 
-set backspace=indent,eol,start
+Plug 'gmarik/Vundle.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'godlygeek/tabular'
+Plug 'lervag/vimtex'
+Plug 'fatih/vim-go'
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'godlygeek/tabular'
-Plugin 'lervag/vimtex'
-Plugin 'fatih/vim-go'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 colorscheme Tomorrow-Night
 
@@ -84,4 +79,5 @@ nmap <C-b> :CtrlPBuffer<cr>
 nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
 
-let maplocalleader = ","
+let mapleader = ","
+let g:mapleader = ","
