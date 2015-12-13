@@ -39,11 +39,8 @@ plugins=(git-custom)
 
 source $ZSH/oh-my-zsh.sh
 
-# Go config
-export GOPATH=$HOME/code/go
-
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:$GOPATH/bin:/usr/X11/bin:./node_modules/.bin:/usr/texbin
+export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:/usr/texbin
 
 export EDITOR="vim"
 
@@ -72,3 +69,6 @@ mux() { ./.tmux-session; }
 
 # Increase the maximum number of file descriptors since it is very low by default on OS X
 ulimit -n 2048
+
+# Let gvm manage go versions
+[[ -s "/home/max/.gvm/scripts/gvm" ]] && source "/home/max/.gvm/scripts/gvm"
