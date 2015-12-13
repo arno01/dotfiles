@@ -39,13 +39,13 @@ plugins=(git-custom)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:/usr/texbin
-
-export EDITOR="vim"
-
 # Go config
 export GOPATH=$HOME/code/go
+
+# Customize to your needs...
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:$GOPATH/bin:/usr/X11/bin:./node_modules/.bin:/usr/texbin
+
+export EDITOR="vim"
 
 # Only call rbenv init if it is installed
 if which rbenv >/dev/null; then
