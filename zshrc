@@ -71,4 +71,4 @@ mux() { ./.tmux-session; }
 ulimit -n 2048
 
 # Let gvm manage go versions
-[[ -s "/home/max/.gvm/scripts/gvm" ]] && source "/home/max/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
