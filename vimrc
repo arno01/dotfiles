@@ -12,13 +12,15 @@ set ttimeoutlen=0
 
 " display whitespace
 set list
-set listchars=tab:▸\ ,trail:·,nbsp:·
+set listchars=tab:>\ ,trail:·,nbsp:·
 
 " indentation
 set autoindent
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+au FileType go set softtabstop=0 shiftwidth=0 tabstop=4 noexpandtab
 
 " cd folder preview
 set wildmenu
