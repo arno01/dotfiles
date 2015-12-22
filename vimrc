@@ -78,6 +78,9 @@ let g:airline#extensions#whitespace#enabled = 0
 " Default to latex, not plaintex
 let g:tex_flavor = "latex"
 
+" Automatically manage Go imports when saving files
+let g:go_fmt_command = "goimports"
+
 " Mappings
 map :nt :NERDTreeToggle
 imap kj <esc>
