@@ -1,6 +1,8 @@
 # General Ack Settings
 --follow
 --smart-case
+--before-context=3
+--after-context=3
 
 # Types
 --type-set=css=.sass
