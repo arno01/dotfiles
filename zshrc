@@ -70,5 +70,9 @@ mux() { ./.tmux-session; }
 # Increase the maximum number of file descriptors since it is very low by default on OS X
 ulimit -n 2048
 
+# nvm manages node versions
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Let gvm manage go versions
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
