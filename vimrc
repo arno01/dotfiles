@@ -9,6 +9,7 @@ set hlsearch
 set splitright
 set splitbelow
 set ttimeoutlen=0
+set backspace=indent,eol,start
 
 " display whitespace
 set list
