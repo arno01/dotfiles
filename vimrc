@@ -27,9 +27,6 @@ au FileType go set softtabstop=0 shiftwidth=0 tabstop=4 noexpandtab
 set wildmenu
 set wildmode=list:longest
 
-" use system clipboard
-set clipboard=unnamedplus
-
 " Map leader key
 let mapleader = ","
 let g:mapleader = ","
