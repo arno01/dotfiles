@@ -39,6 +39,7 @@ set nowritebackup
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 set wildignore+=*/tmp/*,*.scssc,*.sassc,*.class,*.DS_Store
 set wildignore+=*/vendor/bundle/*,*/server/*,*/public/*
+set wildignore+=*/node_modules/*,*/bower_components/*
 set wildignore+=*theaterjobs*/vendor/*,*/web/bundles/*,*/app/cache/*,*/vendor/bundles*
 
 " allow hiding modified buffers
