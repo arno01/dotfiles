@@ -2,3 +2,4 @@
 vendor/bundle
 .tmux-session
 assets/vendor
+.env
