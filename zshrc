@@ -55,7 +55,6 @@ alias b='bundle exec'
 alias ..='cd ..'
 alias ll='ls -hval'
 alias grep='grep --color'
-alias b2d='boot2docker'
 
 if [ ! $(uname -s) = "Darwin" ]; then
     # Simulate OSX's pbcopy and pbpaste on other platforms
@@ -76,3 +75,5 @@ ulimit -n 2048
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+# Configure autoenv
+source /usr/local/opt/autoenv/activate.sh
