@@ -36,6 +36,10 @@ set noswapfile
 set nobackup
 set nowritebackup
 
+" do not duplicate output to terminal
+let &shellpipe="&>"
+
+" ignore these files
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 set wildignore+=*/tmp/*,*.scssc,*.sassc,*.class,*.DS_Store
 set wildignore+=*/vendor/bundle/*,*/server/*,*/public/*
