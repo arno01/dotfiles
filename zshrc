@@ -63,7 +63,7 @@ if [ ! $(uname -s) = "Darwin" ]; then
 fi
 
 # List all files after changing current directory
-cd() { builtin cd "$@" && ll; }
+cd() { builtin cd "$@" && ll && test -f .env && source .env; }
 
 # Alias for executing the ".tmux-session" file in the current directory
 mux() { ./.tmux-session; }
@@ -74,6 +74,3 @@ ulimit -n 2048
 # nvm manages node versions
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Configure autoenv
-source /usr/local/opt/autoenv/activate.sh
