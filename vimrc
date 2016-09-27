@@ -70,7 +70,7 @@ Plug 'majutsushi/tagbar'
 
 call plug#end()
 
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 " Configure airline
 let g:airline_left_sep=''
