@@ -64,7 +64,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
-Plug 'lervag/vimtex'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 
@@ -77,9 +76,6 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
-
-" Default to latex, not plaintex
-let g:tex_flavor = "latex"
 
 " Automatically manage Go imports when saving files
 let g:go_fmt_command = "goimports"
