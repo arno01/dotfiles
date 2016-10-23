@@ -66,10 +66,21 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
 colorscheme Tomorrow-Night-Eighties
+
+" Configure syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Configure airline
 let g:airline_left_sep=''
