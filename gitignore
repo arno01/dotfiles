@@ -1,5 +1,6 @@
 .DS_Store
-vendor/bundle
+vendor/bundle/
 .tmux-session
-assets/vendor
+assets/vendor/
 .env
+.vagrant/
