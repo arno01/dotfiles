@@ -92,7 +92,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:go_fmt_command = "goimports"
 
 " Mappings
-map :nt :NERDTreeToggle
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>N :NERDTreeFind<CR>
 imap kj <esc>
 nmap <C-b> :CtrlPBuffer<cr>
 nmap <F8> :TagbarToggle<CR>
