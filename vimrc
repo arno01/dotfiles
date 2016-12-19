@@ -97,6 +97,8 @@ nmap <Leader>N :NERDTreeFind<CR>
 imap kj <esc>
 nmap <C-b> :CtrlPBuffer<cr>
 nmap <F8> :TagbarToggle<CR>
+nmap <leader>J :tabp<CR>
+nmap <leader>K :tabn<CR>
 
 " Mapping for new line above or below cursor
 nnoremap <C-J> mao<Esc>`a
