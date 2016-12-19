@@ -67,6 +67,8 @@ Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
+Plug 'janko-m/vim-test'
+Plug 'kassio/neoterm'
 
 call plug#end()
 
@@ -87,6 +89,15 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
+
+" Configure vim-test to use neoterm
+let test#strategy = "neoterm"
+let g:neoterm_size = 20
+
+" Configure shortcuts vim-test
+nmap <silent> <leader>R :TestNearest<CR>
+nmap <silent> <leader>r :TestFile<CR>
+nmap <silent> <leader>s :TestSuite<CR>
 
 " Automatically manage Go imports when saving files
 let g:go_fmt_command = "goimports"
