@@ -55,7 +55,8 @@ call plug#begin('~/.vim/bundle')
 Plug 'gmarik/Vundle.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
@@ -85,9 +86,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Configure airline
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline#extensions#hunks#enabled = 0
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 
 " Configure vim-test to use neoterm
