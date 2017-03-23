@@ -94,14 +94,18 @@ let test#strategy = "neoterm"
 let g:neoterm_size = 20
 
 " Configure shortcuts vim-test
-nmap <silent> <leader>R :TestNearest<CR>
-nmap <silent> <leader>r :TestFile<CR>
+nmap <silent> <leader>T :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
 nmap <silent> <leader>s :TestSuite<CR>
+
+" Configure shortcuts for vim-go
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 " Automatically manage Go imports when saving files
 let g:go_fmt_command = "goimports"
 
-" Mappings
+" Further Mappings
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>N :NERDTreeFind<CR>
 imap kj <esc>
