@@ -101,6 +101,8 @@ nmap <silent> <leader>s :TestSuite<CR>
 " Configure shortcuts for vim-go
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>d  <Plug>(go-doc)
+autocmd FileType go nmap <leader>D  <Plug>(go-def)
 
 " Automatically manage Go imports when saving files
 let g:go_fmt_command = "goimports"
