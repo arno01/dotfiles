@@ -70,6 +70,8 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
@@ -92,6 +94,9 @@ let g:airline#extensions#whitespace#enabled = 0
 " Configure vim-test to use neoterm
 let test#strategy = "neoterm"
 let g:neoterm_size = 20
+
+" Configure vim-jsx to also work on .js files
+let g:jsx_ext_required = 0
 
 " Configure shortcuts vim-test
 nmap <silent> <leader>T :TestNearest<CR>
