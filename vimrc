@@ -57,7 +57,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
@@ -97,6 +97,11 @@ let g:neoterm_size = 20
 
 " Configure vim-jsx to also work on .js files
 let g:jsx_ext_required = 0
+
+" Configure Ack.vim to use ripgrep if available
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
+endif
 
 " Configure shortcuts vim-test
 nmap <silent> <leader>T :TestNearest<CR>
