@@ -72,6 +72,7 @@ Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-abolish'
 
 call plug#end()
 
