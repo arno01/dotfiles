@@ -1,6 +1,6 @@
 [user]
-        name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-        email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
+	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [push]
 	default = upstream
 [color]
@@ -19,3 +19,5 @@
 	pr = pull --rebase
 	pu = push
 	cm = commit -v
+	lb = !git branch --color --sort=-committerdate | head -n 5
+	lrb = !git branch --remote --color --sort=-committerdate | head -n 5
