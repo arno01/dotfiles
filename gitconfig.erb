@@ -15,10 +15,12 @@
 	excludesfile = ~/.gitignore
 	precomposeunicode = true
 [alias]
-	co = checkout
-	pr = pull --rebase
-	pu = push
 	cm = commit -v
+	co = checkout
+	d = diff
+	ds = diff --staged
 	lb = !git branch --color --sort=-committerdate | head -n 5
 	lrb = !git branch --remote --color --sort=-committerdate | head -n 5
+	pr = pull --rebase
+	pu = push
 	pufwl = push --force-with-lease
