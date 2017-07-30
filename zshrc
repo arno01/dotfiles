@@ -44,7 +44,7 @@ export GOBIN=$GOPATH/bin
 
 export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:$GOBIN
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Only call rbenv init if it is installed
 if which rbenv >/dev/null; then
