@@ -4,13 +4,9 @@ require 'erb'
 
 desc "install the dot files into user's home directory"
 task :install do
-  install_oh_my_zsh
-  switch_to_zsh
   install_vim_plug
   replace_all = false
-  files = Dir['*'] - %w[Rakefile README.md LICENSE oh-my-zsh tomorrow.itermcolors]
-  files << "oh-my-zsh/custom/plugins/git-custom"
-  files << "oh-my-zsh/custom/tomorrow-custom.zsh-theme"
+  files = Dir['*'] - %w[Rakefile README.md LICENSE tomorrow.itermcolors]
   files.each do |file|
     system %Q{mkdir -p "$HOME/.#{File.dirname(file)}"} if file =~ /\//
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"))
@@ -50,46 +46,12 @@ def link_file(file)
     File.open(File.join(ENV['HOME'], ".#{file.sub(/\.erb$/, '')}"), 'w') do |new_file|
       new_file.write ERB.new(File.read(file)).result(binding)
     end
-  elsif file =~ /zshrc$/ # copy zshrc instead of link
+  elsif file =~ /bashrc$/ # copy bashrc instead of link
     puts "copying ~/.#{file}"
     system %Q{cp "$PWD/#{file}" "$HOME/.#{file}"}
   else
     puts "linking ~/.#{file}"
     system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
-  end
-end
-
-def switch_to_zsh
-  if ENV["SHELL"] =~ /zsh/
-    puts "using zsh"
-  else
-    print "switch to zsh? (recommended) [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "switching to zsh"
-      system %Q{chsh -s `which zsh`}
-    when 'q'
-      exit
-    else
-      puts "skipping zsh"
-    end
-  end
-end
-
-def install_oh_my_zsh
-  if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
-    puts "found ~/.oh-my-zsh"
-  else
-    print "install oh-my-zsh? [ynq] "
-    case $stdin.gets.chomp
-    when 'y'
-      puts "installing oh-my-zsh"
-      system %Q{git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"}
-    when 'q'
-      exit
-    else
-      puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
-    end
   end
 end
 
