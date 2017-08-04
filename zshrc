@@ -42,7 +42,7 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
 
-export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:$GOBIN
+export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:$GOBIN:$PATH
 
 export EDITOR="nvim"
 
