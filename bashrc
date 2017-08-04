@@ -36,7 +36,7 @@ fi
 alias g='git'
 alias b='bundle exec'
 alias ..='cd ..'
-alias ll='ls -hval'
+alias ll='ls -hval --color=auto'
 alias grep='grep --color'
 
 if [ ! $(uname -s) = "Darwin" ]; then
