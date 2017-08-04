@@ -12,6 +12,8 @@ git_prompt() {
   GIT_PS1_SHOWCOLORHINTS=true
   GIT_PS1_STATESEPARATOR=""
 
+  echo -e "\e[90m------------------------------\e[0m"
+
   local c_blue='\[\e[34m\]'
   local c_red='\[\e[31m\]'
   local c_grey='\[\e[90m\]'
