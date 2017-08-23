@@ -80,6 +80,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/vim-js-pretty-template'
+" (dependency of tsuquyomi)
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Go
 Plug 'fatih/vim-go'
@@ -127,6 +132,9 @@ autocmd FileType go nmap <leader>D  <Plug>(go-def)
 
 " Automatically manage Go imports when saving files
 let g:go_fmt_command = "goimports"
+
+" Disable tsuquyomi (typescript support) default mappings
+let g:tsuquyomi_disable_default_mappings = 0
 
 " Further Mappings
 nmap <Leader>n :NERDTreeToggle<CR>
