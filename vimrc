@@ -52,27 +52,37 @@ set hidden
 " Plug handles plugins
 call plug#begin('~/.vim/bundle')
 
-Plug 'gmarik/Vundle.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'kien/ctrlp.vim'
+" General
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mileszs/ack.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'godlygeek/tabular'
-Plug 'fatih/vim-go'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
-Plug 'janko-m/vim-test'
-Plug 'kassio/neoterm'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-abolish'
+Plug 'kassio/neoterm'
+
+" Linting & testing
+Plug 'janko-m/vim-test'
+Plug 'scrooloose/syntastic'
+
+" File navigation & search
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mxw/vim-jsx'
+
+" Go
+Plug 'fatih/vim-go'
 
 call plug#end()
 
