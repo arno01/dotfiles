@@ -18,7 +18,7 @@ git_prompt() {
   local c_red='\[\e[31m\]'
   local c_grey='\[\e[90m\]'
   local c_clear='\[\e[0m\]'
-  __git_ps1 "$c_red\w" " $c_blue»$c_clear " " $c_blue[%s$c_blue]$c_clear"
+  __git_ps1 "$c_red\w" " ${c_blue}»$c_clear " " $c_blue[%s$c_blue]$c_clear"
 }
 
 PROMPT_COMMAND='git_prompt'
@@ -51,8 +51,13 @@ alias glg='git log'
 # other aliases
 alias b='bundle exec'
 alias ..='cd ..'
-alias ll='ls -hval --color=auto'
 alias grep='grep --color'
+if [ ! $(uname -s) = "Darwin" ]
+then
+  alias ll='ls -hval --color=auto'
+else
+  alias ll='ls -hvalG'
+fi
 
 # Simulate macOS' pbcopy and pbpaste on other platforms
 if [ ! $(uname -s) = "Darwin" ]; then
@@ -67,4 +72,11 @@ cd() { builtin cd "$@" && ll && test -f .env && source .env; }
 mux() { ./.tmux-session; }
 
 # nvm manages node versions
-source /usr/share/nvm/init-nvm.sh
+if [ ! $(uname -s) = "Darwin" ]
+then
+  source /usr/share/nvm/init-nvm.sh
+else
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+fi
