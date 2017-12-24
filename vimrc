@@ -79,11 +79,13 @@ Plug 'tpope/vim-fugitive'
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
+Plug 'Quramy/vim-js-pretty-template'
+" - JSX
 Plug 'mxw/vim-jsx'
+" - TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
-Plug 'Quramy/vim-js-pretty-template'
-" (dependency of tsuquyomi)
+" - (dependency of tsuquyomi)
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Go
@@ -112,7 +114,7 @@ let test#strategy = "neoterm"
 let g:neoterm_size = 20
 
 " Configure vim-jsx to also work on .js files
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 
 " Configure Ack.vim to use ripgrep if available
 if executable('rg')
