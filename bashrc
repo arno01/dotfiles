@@ -26,7 +26,7 @@ PROMPT_COMMAND='git_prompt'
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
 
-export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:./node_modules/.bin:$GOBIN:$PATH
+export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:$GOBIN:$PATH
 
 export EDITOR="nvim"
 
@@ -47,6 +47,19 @@ alias gc='git commit -v'
 alias gco='git checkout'
 alias gcm='git checkout master'
 alias glg='git log'
+
+# docker aliases
+alias db='docker build'
+alias dr='docker run'
+alias di='docker images'
+alias dps='docker ps -a'
+alias dip='docker image prune'
+alias dcp='docker container prune'
+alias dvp='docker volume prune'
+alias dri='docker run --rm -it'
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dce='docker-compose exec'
 
 # other aliases
 alias b='bundle exec'
