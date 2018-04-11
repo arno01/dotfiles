@@ -43,7 +43,7 @@ let &shellpipe="&>"
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 set wildignore+=*/tmp/*,*.scssc,*.sassc,*.class,*.DS_Store
 set wildignore+=*/vendor/bundle/*,*/server/*,*/public/*
-set wildignore+=*/node_modules/*,*/bower_components/*
+set wildignore+=*/node_modules/*,*/bower_components/*,*/dist/*
 set wildignore+=*theaterjobs*/vendor/*,*/web/bundles/*,*/app/cache/*,*/vendor/bundles*
 
 " allow hiding modified buffers
@@ -104,6 +104,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " Configure airline
 let g:airline_powerline_fonts = 1
