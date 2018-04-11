@@ -26,7 +26,7 @@ PROMPT_COMMAND='git_prompt'
 export GOPATH=$HOME/code/go
 export GOBIN=$GOPATH/bin
 
-export PATH=/usr/local/bin:$HOME/.rbenv/bin:/usr/bin:/bin:$HOME/.bin:/usr/sbin:/sbin:/usr/X11/bin:$GOBIN:$PATH
+export PATH=/usr/local/bin:$HOME/.rbenv/bin:$GOBIN:$(getconf PATH)
 
 export EDITOR="nvim"
 
