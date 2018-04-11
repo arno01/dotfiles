@@ -84,6 +84,9 @@ cd() { builtin cd "$@" && ll && test -f .env && source .env; }
 # Alias for executing the ".tmux-session" file in the current directory
 mux() { ./.tmux-session; }
 
+# Source global env vars
+[ -s "$HOME/.env" ] && . "$HOME/.env"
+
 # nvm manages node versions
 if [ ! $(uname -s) = "Darwin" ]
 then
